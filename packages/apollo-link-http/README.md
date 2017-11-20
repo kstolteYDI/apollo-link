@@ -122,8 +122,8 @@ const middlewareLink = new ApolloLink((operation, forward) => {
       authorization: localStorage.getItem('token') || null
     }
   });
-  return forward(operation)
-})
+  return forward(operation);
+});
 
 // use with apollo-client
 const link = middlewareLink.concat(httpLink);
